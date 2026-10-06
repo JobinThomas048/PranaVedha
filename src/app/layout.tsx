@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Newsreader, Plus_Jakarta_Sans } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const newsreader = Newsreader({
@@ -55,6 +56,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-full flex flex-col bg-[#faf9f4] text-[#1b1c19] font-sans antialiased selection:bg-[#d4e4ce] selection:text-[#14422d]">
         {children}
+        <Analytics />
       </body>
     </html>
   );
