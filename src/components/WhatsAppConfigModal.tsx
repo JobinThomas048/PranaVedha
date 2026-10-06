@@ -81,7 +81,7 @@ export const WhatsAppConfigModal: React.FC<WhatsAppConfigModalProps> = ({
               type="text"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
-              placeholder="e.g. 919845012345"
+              placeholder="e.g. 917736931582"
               className="w-full bg-[#f5f4ef] rounded-xl px-4 py-3 text-sm font-mono text-[#1b1c19] outline-none focus:bg-white focus:ring-2 focus:ring-[#14422d] transition-all"
             />
             <span className="material-symbols-outlined absolute right-3.5 top-3.5 text-[#717973] text-[18px]">

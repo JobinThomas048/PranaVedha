@@ -1,11 +1,15 @@
 import { BookingDetails } from "../data/consultationData";
 
-export const DEFAULT_WHATSAPP_NUMBER = "919845012345"; // Production Clinic Line
+export const DEFAULT_WHATSAPP_NUMBER = "917736931582"; // Production Clinic Line (+91 7736931582)
 
 export function getStoredWhatsAppNumber(): string {
   if (typeof window !== "undefined") {
     const customNumber = localStorage.getItem("pranaveda_clinic_whatsapp");
-    if (customNumber && customNumber.trim().length > 7) {
+    if (
+      customNumber &&
+      customNumber.trim().length > 7 &&
+      customNumber.trim().replace(/[^0-9]/g, "") !== "919845012345"
+    ) {
       return customNumber.trim().replace(/[^0-9]/g, "");
     }
   }
