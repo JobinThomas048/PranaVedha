@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --primary: #14422d;
+    --primary-container: #2d5a43;
+    --primary-fixed: #bceecf;
+    --primary-fixed-dim: #a1d1b4;
+    --on-primary: #ffffff;
+    --on-primary-container: #9fcfb2;
+    --secondary: #536251;
+    --secondary-container: #d4e4ce;
+    --secondary-fixed: #d7e7d1;
+    --secondary-fixed-dim: #bbcbb6;
+    --on-secondary: #ffffff;
+    --on-secondary-container: #586755;
+    --tertiary: #c26d49;
+    --tertiary-container: #843d1d;
+    --tertiary-fixed: #ffdbce;
+    --tertiary-fixed-dim: #ffb598;
+    --on-tertiary: #ffffff;
+    --surface: #faf9f4;
+    --surface-bright: #faf9f4;
+    --surface-dim: #dbdad5;
+    --surface-container-lowest: #ffffff;
+    --surface-container-low: #f5f4ef;
+    --surface-container: #efeee9;
+    --surface-container-high: #e9e8e3;
+    --surface-container-highest: #e3e3de;
+    --on-surface: #1b1c19;
+    --on-surface-variant: #414943;
+    --outline: #717973;
+    --outline-variant: #c0c9c1;
+    --font-serif: var(--font-newsreader), "Newsreader", Georgia, serif;
+    --font-sans: var(--font-plus-jakarta), "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #faf9f4;
+    color: #1b1c19;
+    font-family: var(--font-sans);
+  }
+
+  body {
+    background-color: #faf9f4;
+    color: #1b1c19;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: #d4e4ce;
+    color: #14422d;
+  }
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+/* Custom Soft Wellness Glows */
+.shadow-botanical {
+  box-shadow: 0 4px 24px -2px rgba(45, 90, 67, 0.08);
+}
+
+.shadow-botanical-lg {
+  box-shadow: 0 16px 40px -4px rgba(45, 90, 67, 0.12);
+}
+
+.shadow-terracotta {
+  box-shadow: 0 8px 24px -3px rgba(194, 109, 73, 0.25);
+}
+
+/* Glassmorphism */
+.glass-panel {
+  background: rgba(250, 249, 244, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* Subtle Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f5f4ef;
+}
+::-webkit-scrollbar-thumb {
+  background: #c0c9c1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8a9a86;
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(0.98); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s ease-in-out infinite;
+}
